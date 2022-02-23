@@ -78,3 +78,34 @@ nav {
     letter-spacing: 2px;
     padding-inline-start: min(1.25vw , 12px);
 }
+.sm-container {
+    width: 243px;
+    height: 243px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+        "socials light-green-square dark-square"
+        "socials . light-gray-square"
+        "socials . ."; 
+}
+.light-green-square { 
+    grid-area: light-green-square; 
+    background-color: var(--lightgraygreen);
+}
+.dark-square { 
+    grid-area: dark-square; 
+    background-color: var(--darkgray);
+}
+.light-gray-square { 
+    grid-area: light-gray-square; 
+    background-color: var(--gray);
+}
+.socials { 
+    grid-area: socials; 
+}
