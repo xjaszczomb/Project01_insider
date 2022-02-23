@@ -57,7 +57,7 @@ nav {
     justify-content: center;
 }
 .header {
-    padding-top: 5em;
+    padding-top: 5vh;
     display: flex;
     flex-direction: column;
 }
@@ -78,12 +78,36 @@ nav {
     letter-spacing: 2px;
     padding-inline-start: min(1.25vw , 12px);
 }
+.btn-holder {
+    margin-top: min(3em,7vh);
+}
+.action-btn {
+    background-color: var(--greenhaze);
+    display: inline-block;
+    border: 0;
+    color: white;
+    font-size: min(1.75rem,10vh);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-inline-start: min(1.25vw , 15px);
+    padding: 0.75em;
+}
+.shadow-btn {
+    color: transparent;
+    background-color: transparent;
+    border: 1px solid white;
+    position: absolute;
+    z-index: -1;
+    margin-left: -5.125em;
+    margin-top: -0.25em;
+}
 
 /* HOME PAGE - SOCIAL MEDIA CONTAINER GRID */
 
 .sm-container {
-    width: 243px;
-    height: 243px;
+    width: 30vh;
+    height: 30vh;
     background-color: white;
     position: absolute;
     bottom: 0;
