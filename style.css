@@ -1,12 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Risque&display=swap');
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
 :root {
     --black: hsl(100, 9%, 7%);
     --darkgray: hsl(110, 5%, 24%);
@@ -17,8 +11,21 @@
     --lightgray:hsl(0, 0%, 95%);
     --apricot: hsl(29, 61%, 67%);
     --lightapricot: hsl(38, 100%, 82%);
-
 }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    /*font-family: 'Risque', cursive;*/
+}
+.flex {
+    display: flex;
+}
+
+/* NAVBAR */
 
 nav {
     position: relative;
@@ -30,9 +37,9 @@ nav {
     justify-content: right;
     padding-inline-end: max(5vw,1em);
 }
-.flex {
-    display: flex;
-}
+
+/* HOME PAGE DESIGN */
+
 .bg-photo {
     overflow: hidden;
     height: 100vh;
@@ -45,4 +52,29 @@ nav {
     object-fit: cover;
     height: 100%;
     object-position: -13em;
+}
+.header-holder {
+    justify-content: center;
+}
+.header {
+    padding-top: 5em;
+    display: flex;
+    flex-direction: column;
+}
+.header h1, .header p {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.header h1 {
+    font-size: min(23vw , 12rem);
+    color: var(--graygreen);
+    letter-spacing: 4px;
+    line-height: min(22vw, 1em);
+}
+.header p {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: min(3.5vw , 1.25rem);
+    color: var(--lightgraygreen);
+    letter-spacing: 2px;
+    padding-inline-start: min(1.25vw , 12px);
 }
