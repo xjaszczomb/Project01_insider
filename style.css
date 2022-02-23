@@ -38,7 +38,7 @@ nav {
     padding-inline-end: max(5vw,1em);
 }
 
-/* HOME PAGE DESIGN */
+/* HOME PAGE - DESIGN */
 
 .bg-photo {
     overflow: hidden;
@@ -78,6 +78,9 @@ nav {
     letter-spacing: 2px;
     padding-inline-start: min(1.25vw , 12px);
 }
+
+/* HOME PAGE - SOCIAL MEDIA CONTAINER GRID */
+
 .sm-container {
     width: 243px;
     height: 243px;
@@ -108,4 +111,11 @@ nav {
 }
 .socials { 
     grid-area: socials; 
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em 0;
+}
+.socials img {
+    width: 40%;
 }
