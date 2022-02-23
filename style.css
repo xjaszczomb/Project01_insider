@@ -7,6 +7,19 @@
     padding: 0;
 }
 
+:root {
+    --black: hsl(100, 9%, 7%);
+    --darkgray: hsl(110, 5%, 24%);
+    --greenhaze: hsl(155, 99%, 29%);
+    --graygreen:hsl(141, 6%, 44%);
+    --lightgraygreen: hsl(139, 9%, 61%);
+    --gray: hsl(0, 0%, 77%);
+    --lightgray:hsl(0, 0%, 95%);
+    --apricot: hsl(29, 61%, 67%);
+    --lightapricot: hsl(38, 100%, 82%);
+
+}
+
 nav {
     position: relative;
     z-index: 1;
