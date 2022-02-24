@@ -24,6 +24,10 @@ body {
 .flex {
     display: flex;
 }
+#homepg, #about {
+    height: 100vh;
+    overflow: hidden;
+}
 
 /* NAVBAR */
 
@@ -142,4 +146,54 @@ nav {
 }
 .socials img {
     width: 40%;
+}
+
+/* ABOUT - DESIGN */
+
+#about {
+    background-color: var(--black);
+    position: relative;
+} 
+.dark-shadow {
+    width: 19rem;
+    height: 40rem;
+    position: absolute;
+    bottom: 0;
+    box-shadow: 10px -10px 15px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+.header-aboutus h2 {
+    color: transparent;
+    font-weight: 900;
+    font-size: 22vw;
+    line-height: 17vw;
+    letter-spacing: 0.05em;
+    display: inline;
+    text-align: right;
+    text-transform: uppercase;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--apricot);
+    z-index: 3;
+}
+.header-aboutus p {
+    color: var(--lightapricot);
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    line-height: 1.75em;
+    display: inline;
+    text-align: right;
+    text-transform: uppercase;
+    padding-left: 5em;
+    z-index: 3;
+}
+.header-aboutus {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+.up-photo {
+    position: absolute;
+    top: 0;
+    z-index: 2;
 }
