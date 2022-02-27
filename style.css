@@ -153,47 +153,68 @@ nav {
 #about {
     background-color: var(--black);
     position: relative;
+    z-index: -3;
 } 
 .dark-shadow {
     width: 19rem;
-    height: 40rem;
+    height: 80vh;
     position: absolute;
     bottom: 0;
     box-shadow: 10px -10px 15px rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    z-index: -2;
 }
-.header-aboutus h2 {
+.h-about {
+    /* background-color: red; */
+    display: inline-block;
+}
+.h-about h2 {
     color: transparent;
     font-weight: 900;
     font-size: 22vw;
     line-height: 17vw;
-    letter-spacing: 0.05em;
-    display: inline;
-    text-align: right;
     text-transform: uppercase;
+    text-align: right;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: var(--apricot);
-    z-index: 3;
 }
-.header-aboutus p {
+.p-about {
+    /* background-color: rgb(79, 72, 136); */
+    margin-block-start: 2em;
+}
+.p-about p{
     color: var(--lightapricot);
     font-weight: 700;
     font-size: 0.75rem;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.15em;
     line-height: 1.75em;
-    display: inline;
     text-align: right;
     text-transform: uppercase;
-    padding-left: 5em;
-    z-index: 3;
 }
 .header-aboutus {
+    display: inline-block;
+    margin-inline-end: 8vw;
+}
+.header-aboutus-holder {
+    height: 70vh;
     display: flex;
-    flex-direction: column;
-    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 .up-photo {
     position: absolute;
     top: 0;
-    z-index: 2;
+    z-index: -1;
+    margin-left: 2em;
+    height: 40vh;
+}
+.down-photo {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    height: 50vh;
+    overflow-x: hidden;
+}
+.down-photo img, .up-photo img  {
+    height: 100%;
 }
