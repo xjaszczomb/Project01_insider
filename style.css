@@ -24,7 +24,7 @@ body {
 .flex {
     display: flex;
 }
-#homepg, #about {
+#homepg, #about, #portfolio {
     height: 100vh;
     overflow: hidden;
 }
@@ -56,9 +56,7 @@ nav {
     background-size: cover;
     background-repeat: no-repeat;
     display: inline-block;
-
 }
-
 .header-holder {
     justify-content: center;
 }
@@ -219,4 +217,33 @@ nav {
 }
 .down-photo img, .up-photo img  {
     height: 100%;
+}
+
+/* PORTFOLIO - DESIGN */
+
+#portfolio {
+    background-color: var(--graygreen);
+    position: relative;
+}
+.header-port-holder {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+}
+.header-port-holder h2 {
+    padding: 2vw 0;
+    text-transform: uppercase;
+    font-size: 60vw;
+    line-height: 42vw;
+    background: linear-gradient(var(--darkgray),var(--graygreen));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+@media (max-height: 680px) {
+    .header-port-holder h2 {
+        font-size: 33vh;
+        line-height: 23vh;
+    }
 }
