@@ -45,18 +45,20 @@ nav {
 /* HOME PAGE - DESIGN */
 
 .bg-photo {
-    overflow: hidden;
-    height: 100vh;
-    width: 100vw;
     position: absolute;
-    top: 0;
-    z-index: -10;
-}
-.bg-photo img {
-    object-fit: cover;
+    top:0;
     height: 100%;
-    object-position: -13em;
+    width: 100%;
+    overflow: hidden;
+    z-index: -10;
+    background-image: url(img/home.png);
+    background-position: -13em;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+
 }
+
 .header-holder {
     justify-content: center;
 }
@@ -213,7 +215,7 @@ nav {
     right: 0;
     z-index: -1;
     height: 50vh;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 .down-photo img, .up-photo img  {
     height: 100%;
