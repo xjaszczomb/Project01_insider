@@ -21,12 +21,18 @@ body {
     font-family: 'Roboto', sans-serif;
     /*font-family: 'Risque', cursive;*/
 }
+.top {
+    position: absolute;
+    top: 0;
+}
 .flex {
     display: flex;
 }
-#homepg, #about, #portfolio {
+#homepg, #about, #portfolio, #contact {
     height: 100vh;
     overflow: hidden;
+    position: relative;
+    z-index: -3;
 }
 
 /* NAVBAR */
@@ -44,9 +50,7 @@ nav {
 
 /* HOME PAGE - DESIGN */
 
-.bg-photo {
-    position: absolute;
-    top:0;
+.bg-home {
     height: 100%;
     width: 100%;
     overflow: hidden;
@@ -152,8 +156,6 @@ nav {
 
 #about {
     background-color: var(--black);
-    position: relative;
-    z-index: -3;
 } 
 .dark-shadow {
     width: 19rem;
@@ -201,8 +203,6 @@ nav {
     align-items: center;
 }
 .up-photo {
-    position: absolute;
-    top: 0;
     z-index: -1;
     margin-left: 2em;
     height: 40vh;
@@ -223,13 +223,9 @@ nav {
 
 #portfolio {
     background-color: var(--graygreen);
-    position: relative;
-    z-index: -3;
 }
 .header-port-holder {
     height: 100%;
-    position: absolute;
-    top: 0;
     display: flex;
     align-items: center;
     z-index: -2;
@@ -249,9 +245,10 @@ nav {
         line-height: 23vh;
     }
 }
+
+/* PORTFOLIO - GALLERY  */
+
 .gallery {
-    position: absolute;
-    top:0;
     height: 100%;
     width: 100%;
     display: flex;
@@ -309,4 +306,39 @@ nav {
     border-top: solid 1px white;
     border-bottom: 0;
     margin: 0 2vw;
+}
+
+/* CONTACT - DESIGN  */
+
+#contact {
+    background-color: var(--darkgray);
+}
+.bg-contact {
+    height: 100%;
+    width: 75%;
+    z-index: -2;
+}
+.bg-contact img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right;
+}
+.nl-holder {
+    height: 83vh;
+    width: 100%;
+}
+.header-nl {
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12vh;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    -webkit-transform: rotate(-90deg) translate(-45%, -215%);
+    -moz-transform: rotate(-90deg) translate(-45%, -215%);
+    -o-transform: rotate(-90deg) translate(-45%, -215%);
+    -ms-transform: rotate(-90deg) translate(-45%, -215%);
+    transform: rotate(-90deg) translate(-45%, -215%);
 }
