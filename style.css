@@ -224,6 +224,7 @@ nav {
 #portfolio {
     background-color: var(--graygreen);
     position: relative;
+    z-index: -3;
 }
 .header-port-holder {
     height: 100%;
@@ -231,6 +232,7 @@ nav {
     top: 0;
     display: flex;
     align-items: center;
+    z-index: -2;
 }
 .header-port-holder h2 {
     padding: 2vw 0;
@@ -246,4 +248,65 @@ nav {
         font-size: 33vh;
         line-height: 23vh;
     }
+}
+.gallery {
+    position: absolute;
+    top:0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.photo-port {
+    width: 75vw;
+    height: 75vw;
+}
+.photo-port img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.photo-shadow-white {
+    position: absolute;
+    margin-inline-start: -10vw;
+    margin-block-start: 17.5vw;
+    width: 75vw;
+    height: 75vw;
+    border: 1px solid white;
+    z-index: -1;
+}
+.photo-shadow-yellow {
+    position: absolute;
+    margin-inline-start: 60vw;
+    margin-block-start: 75vh;
+    width: 100vw;
+    height: 100vw;
+    border: 1px solid var(--apricot);
+}
+.port-title {
+    width: 75vw;
+    margin-block-end: 2vh;
+    display: flex;
+    align-items: center;
+}
+.title-number {
+    font-family: 'Risque', cursive;;
+    color: white;
+}
+.title-text, .title-number {
+    font-size: 3.5vw;
+    letter-spacing: 0.05em;
+}
+.title-text {
+    text-transform: uppercase;
+    font-weight: 300;
+    color: var(--gray);
+}
+.title-line {
+    width: 7vw;
+    border-top: solid 1px white;
+    border-bottom: 0;
+    margin: 0 2vw;
 }
