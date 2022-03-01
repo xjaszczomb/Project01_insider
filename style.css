@@ -411,6 +411,17 @@ nav {
     stroke-width: 1.5;
 }
 .footer {
+    width: 100%;
     position: absolute;
     bottom: 0;
+    color: white;
+    font-weight: 200;
+    font-size: min(4vw,1em);
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    flex-wrap: wrap;
+}
+.footer-item {
+    padding: 0.25em 1em;
 }
