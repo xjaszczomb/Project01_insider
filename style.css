@@ -410,3 +410,7 @@ nav {
     stroke: white;
     stroke-width: 1.5;
 }
+.footer {
+    position: absolute;
+    bottom: 0;
+}
