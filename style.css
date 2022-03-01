@@ -32,6 +32,8 @@ body {
     height: 100vh;
     overflow: hidden;
     position: relative;
+}
+#about, #portfolio {
     z-index: -3;
 }
 
@@ -312,10 +314,11 @@ nav {
 
 #contact {
     background-color: var(--darkgray);
+    z-index: 0;
 }
 .bg-contact {
     height: 100%;
-    width: 75%;
+    width: 70%;
     z-index: -2;
 }
 .bg-contact img {
@@ -336,9 +339,40 @@ nav {
     color: transparent;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: white;
-    -webkit-transform: rotate(-90deg) translate(-45%, -215%);
-    -moz-transform: rotate(-90deg) translate(-45%, -215%);
-    -o-transform: rotate(-90deg) translate(-45%, -215%);
-    -ms-transform: rotate(-90deg) translate(-45%, -215%);
-    transform: rotate(-90deg) translate(-45%, -215%);
+    -webkit-transform: rotate(-90deg) translate(-45%, -220%);
+    -moz-transform: rotate(-90deg) translate(-45%, -220%);
+    -o-transform: rotate(-90deg) translate(-45%, -220%);
+    -ms-transform: rotate(-90deg) translate(-45%, -220%);
+    transform: rotate(-90deg) translate(-45%, -220%);
+    z-index: -1;
+}
+.email-box {
+    position: relative;
+    background-color: black;
+    width: 85%;
+    height: 5em;
+    margin-block-start: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+.email-input {
+    position: absolute;
+    background-color: var(--darkgray);
+    border: 0;
+    padding: 0 1.5rem;
+    font-weight: 200;
+    color: white;
+}
+.email-input, .email-shadow{
+    width: 80%;
+    height: 2.5rem;
+}
+.email-shadow {
+    position: absolute;
+    margin-inline-end: -1em;
+    margin-block-end: -0.5em;
+    border: solid 1px white;
+    z-index: -1;
 }
