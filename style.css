@@ -30,6 +30,7 @@ body {
 }
 #homepg, #about, #portfolio, #contact {
     height: 100vh;
+    min-height: 600px;
     overflow: hidden;
     position: relative;
 }
@@ -87,12 +88,23 @@ nav {
     width: 5em;
 }
 
+@media (min-width: 500px) {
+    .page-nr {
+        font-size: 1rem;
+        padding: 1em 1.5em;
+    }
+}
+@media (min-width: 768px) {
+    .page-nr {
+        font-size: 1.125rem;
+    }
+}
+
 /* HOME PAGE - DESIGN */
 
 .bg-home {
     height: 100%;
     width: 100%;
-    overflow: hidden;
     z-index: -10;
     background-image: url(img/home.png);
     background-position: -13em;
@@ -133,12 +145,16 @@ nav {
     display: inline-block;
     border: 0;
     color: white;
+}
+.shadow-btn, .action-btn {
+    padding: 0.75em;
+    display: inline-block;
     font-size: min(1.75rem,10vh);
     font-family: 'Roboto', sans-serif;
-    font-weight: 100;
     text-transform: uppercase;
-    margin-inline-start: min(1.25vw , 15px);
+    font-weight: 100;
     padding: 0.75em;
+    margin-inline-start: min(1.25vw , 15px);
 }
 .shadow-btn {
     color: transparent;
@@ -150,12 +166,61 @@ nav {
     margin-top: -0.25em;
 }
 
+@media (min-width: 500px) {
+    #homepg, #about, #portfolio, #contact {
+        min-height: 800px;
+    }
+    .bg-home {
+        right: 0;
+        width: 75%;
+    }
+    .action-btn, .shadow-btn {
+        font-size: 2rem;
+        padding: 0.75em;
+    }
+    .shadow-btn {
+        margin-left: -5.375em;
+        margin-top: -0.15em;
+    }
+}
+@media (min-width: 768px) {
+    .bg-home {
+        background-position: -5em;
+    }
+    .header h1 {
+        letter-spacing: 10px;
+    }
+    .header p {
+        padding-inline-start: 4em;
+        letter-spacing: 0.15em;
+        line-height: 1.5rem;
+    }
+    .action-btn, .shadow-btn {
+        font-size: 2.5rem;
+    }
+    .action-btn {
+        margin-inline-start: 4.125em;
+    }
+    .btn-holder {
+        margin-top: 2em;
+    }
+}
+@media (min-width: 992px) {
+    .bg-home {
+        background-position: 0;
+    }
+    .header-holder {
+        justify-content: flex-start;
+        padding-left: 8em;
+    }
+}
+
 /* HOME PAGE - SOCIAL MEDIA CONTAINER GRID */
 
 .sm-container {
     width: 30vh;
     height: 30vh;
-    background-color: white;
+    background-color: var(--lightgray);
     position: absolute;
     bottom: 0;
     z-index: 1;
@@ -190,7 +255,43 @@ nav {
 .socials-grid img {
     width: 40%;
 }
+.grid-desktop {
+    display: none;
+    width: 162px;
+    height: 243px;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    grid-template-areas: 
+    "light-green-square dark-square"
+    ". light-gray-square"
+    ". ."; 
+    margin-left: -1px;
+}
 
+@media (min-width: 500px) {
+    .grid-mobile {  
+        position: absolute;
+        z-index: -10;
+        width: 25%;
+        height: 243px;
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr 1fr 1fr; 
+        grid-template-areas:
+        "socials-grid ."
+        "socials-grid ."
+        "socials-grid ."; 
+    }
+    .grid-desktop {
+        display: grid;
+    }
+    .socials-grid {
+        align-items: flex-start;
+        margin-left: 2.75em;
+    }
+    .socials-grid img {
+        width: 2.25em;
+    }
+}
 /* ABOUT - DESIGN */
 
 #about {
