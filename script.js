@@ -7,9 +7,9 @@ const counter = document.createElement("div");
 counter.classList.add("page-counter","top","flex");
 
 counter.innerHTML = "<div class='page-counter-holder flex'>"+
-                        "<div class='page-nr'>1</div>"+
+                        "<div class='page-nr' id='current'>1</div>"+
                         "<hr class='page-line'>"+
-                        "<div class='page-nr'>4</div>"+
+                        "<div class='page-nr' id='total'>4</div>"+
                     "</div>";
 navbar.innerHTML ="<div class='navbar flex'>"+
                     "<div class='nav-toggle'>"+
