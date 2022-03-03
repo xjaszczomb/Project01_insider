@@ -168,7 +168,7 @@ nav {
 
 @media (min-width: 500px) {
     #homepg, #about, #portfolio, #contact {
-        min-height: 800px;
+        min-height: 700px;
     }
     .bg-home {
         right: 0;
@@ -285,8 +285,7 @@ nav {
         display: grid;
     }
     .socials-grid {
-        align-items: flex-start;
-        margin-left: 2.75em;
+        max-width: 81px;
     }
     .socials-grid img {
         width: 2.25em;
