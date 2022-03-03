@@ -308,7 +308,7 @@ nav {
     margin-inline-end: 8vw;
 }
 .header-aboutus-holder {
-    height: 70vh;
+    height: 35em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -365,8 +365,15 @@ nav {
     .about-gallery {
         width: 90%;
     }
+    .up-photo {
+        height: max(40vh,17em);
+    }
     .down-photo {
-        height: 55%;
+        height: 30em;
+        background-color: black;
+    }
+    .down-photo img {
+        opacity: 75%;
     }
 }
 @media (min-width: 768px) {
@@ -374,10 +381,10 @@ nav {
         width: 45em;
     }
     .down-photo {
-        height: 65%;
+        height: 35em;
     }
     .up-photo {
-        height: 50%;
+        height: 30em;
     }
     .h-about h2 {
         font-size: 10rem;
@@ -386,6 +393,7 @@ nav {
     }
     .header-aboutus {
         margin-inline-end: 0;
+        margin-inline-start: 4em;
     }
 }
 @media (min-width: 992px) {
@@ -394,17 +402,20 @@ nav {
         margin-left: 10%;
     }
     .down-photo {
-        height: 85%;
+        height: 40em;
     }
     .header-aboutus-holder {
         justify-content: left;
         align-items: center;
-        margin-inline-start:35vw;
+        margin-inline-start:25vw;
+    }
+    .dark-shadow {
+        height: 80%;
     }
 }
 @media (min-width: 1400px) {
     .header-aboutus-holder {
-        margin-inline-start:45em;
+        margin-inline-start:40em;
     }
 }
 
