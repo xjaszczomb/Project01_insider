@@ -665,6 +665,33 @@ nav {
     font-size: 0.75rem;
     color: white;
 }
+
+@media (min-width: 768px) {
+    .email-box {
+        height: 7em;
+    }
+    .email-input {
+        font-size: 1em;
+        padding: 0 1.5rem;
+    }
+    .email-input, .email-shadow{
+        width: 80%;
+        height: 3.25rem;
+    }
+    .header-nl {
+        font-size: 6rem;
+    }
+    .nl-text {
+        font-size: 1rem;
+    }
+}
+@media (min-width: 992px) {
+    .email-box {
+       margin: auto;
+    }
+}
+/* SOCIALS CONTACT */
+
 .socials-contact {
     flex-direction: column;
     position: absolute;
@@ -685,6 +712,9 @@ nav {
     stroke: white;
     stroke-width: 1.5;
 }
+
+/* FOOTER - DESING */
+
 .footer {
     width: 100%;
     position: absolute;
@@ -699,4 +729,14 @@ nav {
 }
 .footer-item {
     padding: 0.25em 1em;
+}
+
+@media (min-width: 768px) {
+    .footer {
+        justify-content: space-around;
+        font-size: 1.125em;
+    }
+    .footer-item {
+        padding: 2em 1em;
+    }
 }
