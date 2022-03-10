@@ -168,7 +168,7 @@ nav {
 
 @media (min-width: 500px) {
     #homepg, #about, #portfolio, #contact {
-        min-height: 700px;
+        min-height: 750px;
     }
     .bg-home {
         right: 0;
@@ -373,7 +373,7 @@ nav {
         background-color: black;
     }
     .down-photo img {
-        opacity: 75%;
+        opacity: 65%;
     }
 }
 @media (min-width: 768px) {
@@ -446,6 +446,18 @@ nav {
         line-height: 23vh;
     }
 }
+@media (min-width: 500px) {
+    .header-port-holder h2 {
+        padding: 0.1em 0;
+        font-size: 16em;
+        line-height: 0.7em;
+    }
+}
+@media (min-width: 992px) {
+    .header-port-holder {
+        margin-inline-start: 2em
+    }
+}
 
 /* PORTFOLIO - GALLERY  */
 
@@ -457,21 +469,19 @@ nav {
     justify-content: center;
     flex-direction: column;
 }
-.photo-port {
-    width: 75vw;
-    height: 75vw;
-}
 .photo-port img {
     object-fit: cover;
     width: 100%;
     height: 100%;
 }
+.photo-port, .photo-shadow-white {
+    width: min(75vw,25em);
+    height: min(75vw,25em);
+}
 .photo-shadow-white {
     position: absolute;
     margin-inline-start: -10vw;
     margin-block-start: 17.5vw;
-    width: 75vw;
-    height: 75vw;
     border: 1px solid white;
     z-index: -1;
 }
@@ -484,7 +494,7 @@ nav {
     border: 1px solid var(--apricot);
 }
 .port-title {
-    width: 75vw;
+    width: min(75vw,25em);
     margin-block-end: 2vh;
     display: flex;
     align-items: center;
@@ -494,7 +504,7 @@ nav {
     color: white;
 }
 .title-text, .title-number {
-    font-size: 3.5vw;
+    font-size: min(3.5vw,1em);
     letter-spacing: 0.05em;
 }
 .title-text {
@@ -503,10 +513,77 @@ nav {
     color: var(--gray);
 }
 .title-line {
-    width: 7vw;
+    width: min(7vw,3em);
     border-top: solid 1px white;
     border-bottom: 0;
     margin: 0 2vw;
+}
+@media (min-width: 500px){
+    .photo-shadow-yellow {
+        margin-inline-start: 75%;
+        margin-block-start: 130%;
+    }
+}
+@media (min-width: 768px) {
+    .photo-port, .photo-shadow-white {
+        width: min(75vw,46em);
+        height: 35em;
+    }
+    .port-title {
+        width: min(75vw,50em);
+    }
+    .title-text, .title-number {
+        font-size: 1.25em;
+    }
+    .title-line {
+        margin: 0 0.5em;
+    }
+    .photo-shadow-white {
+        margin-inline-start: -2em;
+        margin-block-start: 9em;
+    }
+    @media (max-height: 750px) {
+        .photo-port, .photo-shadow-white {
+            height: 32em;
+        }
+    }
+}
+@media (min-width: 992px) {
+    .gallery {
+        top: -2em;
+    }
+    .title-text, .title-number {
+        font-size: 1.375em;
+    }
+    .title-number {
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+    }
+    .port-title {
+        -webkit-transform: rotate(90deg) translate(54%, -1450%);
+        -moz-transform: rotate(90deg) translate(54%, -1450%);
+        -o-transform: rotate(90deg) translate(54%, -1450%);
+        -ms-transform: rotate(90deg) translate(54%, -1450%);
+        transform: rotate(90deg) translate(54%, -1450%);
+    }
+    .photo-shadow-white {
+        margin-inline-start: -6em;
+    }
+}
+@media (min-width: 1300px) {
+    .port-title {
+        -webkit-transform: rotate(90deg) translate(54%, -1630%);
+        -moz-transform: rotate(90deg) translate(54%, -1630%);
+        -o-transform: rotate(90deg) translate(54%, -1630%);
+        -ms-transform: rotate(90deg) translate(54%, -1630%);
+        transform: rotate(90deg) translate(54%, -1630%);
+    }
+    .photo-port, .photo-shadow-white {
+        width: 52em;
+    }
 }
 
 /* CONTACT - DESIGN  */
