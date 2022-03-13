@@ -604,10 +604,10 @@ nav {
     object-fit: cover;
     object-position: right;
 }
-.nl-holder {
+.newsletter-holder {
     height: 85vh;
 }
-.header-nl {
+.header-newsletter {
     display: inline-block;
     text-transform: uppercase;
     font-weight: 700;
@@ -615,12 +615,24 @@ nav {
     color: transparent;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: white;
+}
+.header-newsletter-mobile {
     -webkit-transform: rotate(-90deg) translate(-45%, -220%);
     -moz-transform: rotate(-90deg) translate(-45%, -220%);
     -o-transform: rotate(-90deg) translate(-45%, -220%);
     -ms-transform: rotate(-90deg) translate(-45%, -220%);
     transform: rotate(-90deg) translate(-45%, -220%);
     z-index: -1;
+}
+.header-newsletter-desktop {
+    position: absolute;
+    left: -0.25em;
+    top: -0.75em;
+    display: none;
+}
+.email-box-overflow {
+    justify-content: center;
+    align-items: center;
 }
 .email-box {
     position: relative;
@@ -632,6 +644,25 @@ nav {
     align-items: center;
     z-index: 999;
 }
+.email-box-shadow {
+    display: none;
+    position: absolute;
+    border: 1px solid white;
+    margin-inline-start: -8em;
+    margin-block-end: -6em;
+}
+.email-holder {
+    position: absolute;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+}
+.email-text {
+    top: -1.75em;
+    font-weight: 300;
+    font-size: 0.75rem;
+    color: white;
+}
 .email-input {
     position: absolute;
     background-color: var(--darkgray);
@@ -641,7 +672,7 @@ nav {
     color: white;
 }
 .email-input, .email-shadow{
-    width: 80%;
+    width: 100%;
     height: 2.5rem;
 }
 .email-shadow {
@@ -651,40 +682,74 @@ nav {
     border: solid 1px white;
     z-index: -1;
 }
-.nl-button {
+.newsletter-button {
     position: absolute;
     margin-block-end: -5.25em;
     right: 0.375em;
 }
-.nl-text {
-    top: -1.75em;
-    font-weight: 300;
-    font-size: 0.75rem;
-    color: white;
-}
 
-@media (min-width: 768px) {
+@media (min-width: 500px) {
     .email-box {
         height: 7em;
+    }
+    .email-text {
+        font-size: 1rem;
     }
     .email-input {
         font-size: 1em;
         padding: 0 1.5rem;
     }
     .email-input, .email-shadow{
-        width: 80%;
         height: 3.25rem;
     }
-    .header-nl {
+    .newsletter-button {
+        padding: 0.75em 1em ;
+        font-size: 2rem;
+    }
+}
+@media (min-width: 768px) {
+    .header-newsletter {
         font-size: 6rem;
     }
-    .nl-text {
-        font-size: 1rem;
+    .newsletter-button {
+        position: static;
+        margin-block-end: 0;
+        right: auto;
+    }
+    .email-box, .email-box-shadow {
+        height: 9em;
+    }
+    .email-box {
+        justify-content: space-around;
+        padding: 0 1em;
+    }
+    .email-holder {
+        position: static;
+    }
+    .email-input, .email-shadow,.email-holder {
+        width: 27em;
     }
 }
 @media (min-width: 992px) {
+    .header-newsletter-mobile {
+        display: none;
+    }
+    .header-newsletter-desktop {
+        display: block;
+    }
     .email-box {
        margin: auto;
+    }
+    .email-box, .email-box-shadow {
+       width: 53em;
+    }
+    .email-box-shadow {
+        display: block;
+    }
+    .email-text {
+        text-align: right;
+        position: static;
+        max-width: 8em;
     }
 }
 /* SOCIALS CONTACT */
