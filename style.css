@@ -606,6 +606,7 @@ nav {
 }
 .newsletter-holder {
     height: 85vh;
+    min-height: 30em;
 }
 .header-newsletter {
     display: inline-block;
@@ -636,7 +637,7 @@ nav {
 }
 .email-box {
     position: relative;
-    background-color: black;
+    background-color: var(--black);
     width: 90%;
     height: 5.5em;
     margin-block-start: 15vh;
@@ -647,7 +648,7 @@ nav {
 .email-box-shadow {
     display: none;
     position: absolute;
-    border: 1px solid white;
+    border: 1px solid var(--lightgraygreen);
     margin-inline-start: -8em;
     margin-block-end: -6em;
 }
@@ -679,7 +680,7 @@ nav {
     position: absolute;
     margin-inline-end: -1em;
     margin-block-end: -0.625em;
-    border: solid 1px white;
+    border: solid 1px var(--lightgraygreen);
     z-index: -1;
 }
 .newsletter-button {
@@ -731,6 +732,10 @@ nav {
     }
 }
 @media (min-width: 992px) {
+    .bg-contact {
+        width: 35%;
+        margin: 0 30% 0 35%;
+    }
     .header-newsletter-mobile {
         display: none;
     }
@@ -750,18 +755,19 @@ nav {
         text-align: right;
         position: static;
         max-width: 8em;
+        color: var(--gray);
     }
 }
 /* SOCIALS CONTACT */
 
 .socials-contact {
     flex-direction: column;
-    width: 28%;
+    width: 30%;
     align-items: center;
 }
 .socials-contact svg {
-    height: min(1.75em,4vh);
-    width: min(1.75em,4vh);
+    height: max(1.5em,4vh);
+    width: max(1.5em,4vh);
     margin-block-end: 0.5em;
 }
 .socials-contact svg:last-child {
@@ -770,6 +776,12 @@ nav {
 .svg-icon-contact{
     stroke: white;
     stroke-width: 1.5;
+}
+@media (min-width: 992px) {
+    .socials-contact {
+        align-items: flex-start;
+        padding: 2em;
+    }
 }
 
 /* FOOTER - DESING */
@@ -790,6 +802,7 @@ nav {
     .footer {
         justify-content: space-around;
         font-size: 1.125em;
+        flex-direction: row-reverse;
     }
     .footer-item {
         padding: 2em 1em;
