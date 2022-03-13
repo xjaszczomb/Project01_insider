@@ -37,6 +37,20 @@ body {
 #about, #portfolio {
     z-index: -3;
 }
+.mobile {
+    display: block;
+}
+.desktop {
+    display: none;
+}
+@media (min-width: 768px) {
+    .mobile {
+        display: none;
+    }
+    .desktop {
+        display: block;
+    }
+}
 
 /* NAVBAR */
 
@@ -116,7 +130,7 @@ nav {
     justify-content: center;
 }
 .header {
-    padding-top: 5vh;
+    padding-top: 8vh;
     display: flex;
     flex-direction: column;
 }
@@ -154,7 +168,6 @@ nav {
     text-transform: uppercase;
     font-weight: 100;
     padding: 0.75em;
-    margin-inline-start: min(1.25vw , 15px);
 }
 .shadow-btn {
     color: transparent;
@@ -162,8 +175,11 @@ nav {
     border: 1px solid white;
     position: absolute;
     z-index: -1;
-    margin-left: -5.125em;
-    margin-top: -0.25em;
+    margin-inline-start: -5.375em;
+    margin-block-start: -0.125em;
+}
+.home-btn {
+    margin-inline-start: min(1.25vw , 15px);
 }
 
 @media (min-width: 500px) {
@@ -178,10 +194,6 @@ nav {
         font-size: 2rem;
         padding: 0.75em;
     }
-    .shadow-btn {
-        margin-left: -5.375em;
-        margin-top: -0.15em;
-    }
 }
 @media (min-width: 768px) {
     .bg-home {
@@ -195,14 +207,17 @@ nav {
         letter-spacing: 0.15em;
         line-height: 1.5rem;
     }
-    .action-btn, .shadow-btn {
-        font-size: 2.5rem;
+    .btn-holder {
+        position: absolute;
+        bottom: 243px;
     }
     .action-btn {
-        margin-inline-start: 4.125em;
+        font-size: 2.5rem;
+        padding: 0.75em;
     }
-    .btn-holder {
-        margin-top: 2em;
+    .home-btn {
+        width: 243px;
+        margin-inline-start: 0;
     }
 }
 @media (min-width: 992px) {
@@ -250,7 +265,7 @@ nav {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding: 1em 0;
+    padding: 1.5em 0;
 }
 .socials-grid img {
     width: 40%;
@@ -287,7 +302,7 @@ nav {
         max-width: 81px;
     }
     .socials-grid img {
-        width: 2.25em;
+        width: 2em;
     }
 }
 /* ABOUT - DESIGN */
