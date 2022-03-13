@@ -1,3 +1,11 @@
+function currentWidth() {
+    return $(window).width();
+}
+
+$(document).ready(()=> { currentWidth()<992 ? $("#emailboxoverflow").removeClass("email-box-overflow") : $("#emailboxoverflow").addClass("email-box-overflow");});
+$(window).resize(()=> { currentWidth()<992 ? $("#emailboxoverflow").removeClass("email-box-overflow") : $("#emailboxoverflow").addClass("email-box-overflow");});
+
+// dynamic generating navbar and counter
 $(document).ready(()=> $('#pabout').css("width",$('#habout').width()) );
 $(window).resize(()=> $('#pabout').css("width",$('#habout').width()) );
 
