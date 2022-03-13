@@ -4,7 +4,7 @@ $(window).resize(()=> $('#pabout').css("width",$('#habout').width()) );
 
 const navbar = document.createElement("nav");
 const counter = document.createElement("div");
-counter.classList.add("page-counter","top","flex");
+counter.classList.add("page-counter","top","flex","w-100","h-100");
 
 counter.innerHTML = "<div class='page-counter-holder flex'>"+
                         "<div class='page-nr' id='current'>1</div>"+

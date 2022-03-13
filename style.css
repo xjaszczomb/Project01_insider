@@ -19,15 +19,29 @@
 }
 body {
     font-family: 'Roboto', sans-serif;
-    /*font-family: 'Risque', cursive;*/
 }
 .top {
     position: absolute;
     top: 0;
 }
+.right {
+    position: absolute;
+    right: 0;
+}
+.bottom {
+    position: absolute;
+    bottom: 0;
+}
+.w-100 {
+    width: 100%;
+}
+.h-100 {
+    height: 100%;
+}
 .flex {
     display: flex;
 }
+
 #homepg, #about, #portfolio, #contact {
     height: 100vh;
     min-height: 600px;
@@ -37,6 +51,7 @@ body {
 #about, #portfolio {
     z-index: -3;
 }
+
 .mobile {
     display: block;
 }
@@ -70,8 +85,6 @@ nav {
 .page-counter {
     justify-content: right;
     align-items: center;
-    width: 100%;
-    height: 100%;
 }
 .page-counter-holder {
     flex-direction: column;
@@ -117,8 +130,6 @@ nav {
 /* HOME PAGE - DESIGN */
 
 .bg-home {
-    height: 100%;
-    width: 100%;
     z-index: -10;
     background-image: url(img/home.png);
     background-position: -13em;
@@ -131,7 +142,6 @@ nav {
 }
 .header {
     padding-top: 8vh;
-    display: flex;
     flex-direction: column;
 }
 .header h1, .header p {
@@ -236,8 +246,6 @@ nav {
     width: 30vh;
     height: 30vh;
     background-color: var(--lightgray);
-    position: absolute;
-    bottom: 0;
     z-index: 1;
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr; 
@@ -313,8 +321,6 @@ nav {
 .dark-shadow {
     width: 75%;
     height: 75%;
-    position: absolute;
-    bottom: 0;
     box-shadow: 10px -10px 15px rgba(0, 0, 0, 0.5);
     z-index: -2;
 }
@@ -324,7 +330,6 @@ nav {
 }
 .header-aboutus-holder {
     height: 35em;
-    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -361,19 +366,11 @@ nav {
     height: 40vh;
 }
 .down-photo {
-    position: absolute;
-    bottom: 0;
-    right: 0;
     z-index: -1;
-    height: 50vh;
+    height: 50%;
     overflow: hidden;
 }
-.down-photo img, .up-photo img  {
-    height: 100%;
-}
 .about-gallery {
-    width: 100%;
-    height: 100%;
     z-index: -1;
 }
 @media (min-width: 500px) {
@@ -440,8 +437,6 @@ nav {
     background-color: var(--graygreen);
 }
 .header-port-holder {
-    height: 100%;
-    display: flex;
     align-items: center;
     z-index: -2;
 }
@@ -477,17 +472,12 @@ nav {
 /* PORTFOLIO - GALLERY  */
 
 .gallery {
-    height: 100%;
-    width: 100%;
-    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 .photo-port img {
     object-fit: cover;
-    width: 100%;
-    height: 100%;
 }
 .photo-port, .photo-shadow-white {
     width: min(75vw,25em);
@@ -511,7 +501,6 @@ nav {
 .port-title {
     width: min(75vw,25em);
     margin-block-end: 2vh;
-    display: flex;
     align-items: center;
 }
 .title-number {
@@ -608,19 +597,15 @@ nav {
     z-index: 0;
 }
 .bg-contact {
-    height: 100%;
     width: 72%;
     z-index: -2;
 }
 .bg-contact img {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
     object-position: right;
 }
 .nl-holder {
     height: 85vh;
-    width: 100%;
 }
 .header-nl {
     display: inline-block;
@@ -643,7 +628,6 @@ nav {
     width: 90%;
     height: 5.5em;
     margin-block-start: 15vh;
-    display: flex;
     justify-content: center;
     align-items: center;
     z-index: 999;
@@ -673,8 +657,6 @@ nav {
     right: 0.375em;
 }
 .nl-text {
-    position: absolute;
-    right: 0;
     top: -1.75em;
     font-weight: 300;
     font-size: 0.75rem;
@@ -709,9 +691,6 @@ nav {
 
 .socials-contact {
     flex-direction: column;
-    position: absolute;
-    bottom: 0;
-    right: 0;
     width: 28%;
     align-items: center;
 }
@@ -731,13 +710,9 @@ nav {
 /* FOOTER - DESING */
 
 .footer {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
     color: white;
     font-weight: 200;
     font-size: min(4vw,1em);
-    display: flex;
     flex-direction: row;
     justify-content:center;
     flex-wrap: wrap;
