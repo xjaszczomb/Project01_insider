@@ -1,28 +1,48 @@
 function currentWidth() {
     return $(window).width();
 }
+function validNavbarAddress() {
+    return currentWidth()<992 ? "items/navbarMobile.html" : "items/navbarDesktop.html"
+}
 
-$(document).ready(()=> { currentWidth()<992 ? $("#emailboxoverflow").removeClass("email-box-overflow") : $("#emailboxoverflow").addClass("email-box-overflow");});
-$(window).resize(()=> { currentWidth()<992 ? $("#emailboxoverflow").removeClass("email-box-overflow") : $("#emailboxoverflow").addClass("email-box-overflow");});
-
-// dynamic generating navbar and counter
-$(document).ready(()=> $('#pabout').css("width",$('#habout').width()) );
-$(window).resize(()=> $('#pabout').css("width",$('#habout').width()) );
-
+//navbar
 
 const navbar = document.createElement("nav");
 const counter = document.createElement("div");
 counter.classList.add("page-counter","top","flex","w-100","h-100");
 
-counter.innerHTML = "<div class='page-counter-holder flex'>"+
-                        "<div class='page-nr' id='current'>1</div>"+
-                        "<hr class='page-line'>"+
-                        "<div class='page-nr' id='total'>4</div>"+
-                    "</div>";
-navbar.innerHTML ="<div class='navbar flex'>"+
-                    "<div class='nav-toggle'>"+
-                        "<img src='icons/menu.png' alt='menu'>"+
-                    "</div>"+
-                "</div>";
-$(".main-page").prepend(navbar,counter);
+function getNavbar() {
+    fetch(validNavbarAddress())
+        .then((response) => {
+            return response.text();
+        })
+        .then((data) => {
+            $("nav").empty();
+            navbar.innerHTML=data;
+            $(".main-page").prepend(navbar);
+        });
+}
 
+$(window).resize(()=> getNavbar());
+$(document).ready(()=> getNavbar());
+
+//counter
+
+fetch("items/counter.html")
+    .then((response) => {
+        return response.text();
+     })
+    .then((data) => {
+        counter.innerHTML=data;
+        $(".main-page").prepend(counter);
+    });
+
+//newsletter class adding/removing (resize)
+    
+$(document).ready(()=> { currentWidth()<992 ? $("#emailboxoverflow").removeClass("email-box-overflow") : $("#emailboxoverflow").addClass("email-box-overflow");});
+$(window).resize(()=> { currentWidth()<992 ? $("#emailboxoverflow").removeClass("email-box-overflow") : $("#emailboxoverflow").addClass("email-box-overflow");});
+
+// dynamic width of p (about)
+$(document).ready(()=> $('#pabout').css("width",$('#habout').width()) );
+$(window).resize(()=> $('#pabout').css("width",$('#habout').width()) );
+$(document).scroll(()=> $('#pabout').css("width",$('#habout').width()) );
