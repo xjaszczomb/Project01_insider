@@ -1,15 +1,17 @@
-<div class='navbar flex'>
-    <div class='nav-toggle'>
+<div class='navbar flex' aria-expanded="false">
+    <div class='nav-toggle' data-visible="true">
         <img src='icons/menu.png' alt='menu'>
     </div>
+    <div class='nav-close top right flex' data-visible="false">
+        <img  src="icons/close.svg" alt='close'>
+    </div>
     <div class="navbar-nav nav" data-visible="false">
-        <img class="close-nav" src="icons/close.svg">
-        <!-- <ul class="nav-list flex">
+        <ul class="nav-list flex">
             <li class="nav-item">Home</li>
-            <li class="nav-item">About</li>
+            <li class="nav-item">About us</li>
             <li class="nav-item">Portfolio</li>
             <li class="nav-item">Contact</li>
-        </ul> -->
+        </ul>
     </div>
 </div>
 
