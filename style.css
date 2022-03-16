@@ -75,9 +75,73 @@ nav {
 }
 .navbar {
     align-items: center;
+    justify-content: flex-end;
     height: 6em;
-    justify-content: right;
     padding-inline-end: max(5vw,1em);
+}
+.nav-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    flex-direction: column;
+    animation: slideToLeft 1s;
+}
+.nav-item {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding: 0.75em 2em;
+}
+.nav-toggle[data-visible="false"] {
+    display: none;
+}
+.nav-close[data-visible="false"] {
+    display: none;
+}
+.navbar-nav[data-visible="false"] {
+    display: none;
+}
+.navbar[aria-expanded="true"] {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    z-index: 999;
+    justify-content: flex-start;
+    background: rgba(0, 0, 0, 0.9);
+    animation: sideNav 1s;
+}
+.nav-close {
+    height: 6em;
+    justify-content: center;
+}
+.nav-close img{
+    width: 75%;
+}
+
+@keyframes sideNav {
+    from {width: 0%;}
+    to {width: 100%;}
+}
+@keyframes slideToLeft {
+    from {margin-left : 100vw;}
+    to {margin-left :0 ;}
+}
+
+@media (min-width: 500px) {
+    .navbar[aria-expanded="true"] {
+        width: min(75%,30em);
+    }
+    @keyframes sideNav {
+        from {width: 0%;}
+        to {width: min(75%,30em);}
+    }
+}
+@media (min-width: 992px) {
+    .nav-toggle {
+        display: none;
+    }
 }
 
 /* PAGE COUNTER  */
@@ -89,6 +153,7 @@ nav {
 .page-counter-holder {
     flex-direction: column;
     align-items: center;
+    z-index: 1;
 }
 .page-line {
     height: 5em;
@@ -290,6 +355,9 @@ nav {
     ". ."; 
     margin-left: -1px;
 }
+.grid-mobile {
+    z-index: 0;
+}
 @media (min-width: 500px) {
     .grid-mobile {  
         position: absolute;
@@ -318,11 +386,13 @@ nav {
 #about {
     background-color: var(--black);
 } 
+.about-gallery {
+    z-index: 0;
+}
 .dark-shadow {
     width: 75%;
     height: 75%;
     box-shadow: 10px -10px 15px rgba(0, 0, 0, 0.5);
-    z-index: 1;
 }
 .header-aboutus {
     display: inline-block;
@@ -333,7 +403,7 @@ nav {
     height: 35em;
     justify-content: center;
     align-items: center;
-    z-index: 999;
+    z-index: 0;
 }
 .h-about {
     /* background-color: red; */
@@ -437,7 +507,7 @@ nav {
 }
 .header-port-holder {
     align-items: center;
-    z-index: 2;
+    z-index: 0;
 }
 .header-port-holder h2 {
     padding: 2vw 0;
@@ -474,6 +544,7 @@ nav {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    z-index: 0;
 }
 .photo-port img {
     position: relative;
@@ -646,7 +717,7 @@ nav {
     margin-block-start: 15vh;
     justify-content: center;
     align-items: center;
-    z-index: 999;
+    z-index: 0;
 }
 .email-box-shadow {
     display: none;
