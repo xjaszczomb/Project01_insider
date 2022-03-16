@@ -48,9 +48,9 @@ body {
     overflow: hidden;
     position: relative;
 }
-#about, #portfolio {
+/* #about, #portfolio {
     z-index: -3;
-}
+} */
 
 .mobile {
     display: block;
@@ -322,16 +322,18 @@ nav {
     width: 75%;
     height: 75%;
     box-shadow: 10px -10px 15px rgba(0, 0, 0, 0.5);
-    z-index: -2;
+    z-index: 1;
 }
 .header-aboutus {
     display: inline-block;
     margin-inline-end: 8vw;
 }
 .header-aboutus-holder {
+    position: relative;
     height: 35em;
     justify-content: center;
     align-items: center;
+    z-index: 999;
 }
 .h-about {
     /* background-color: red; */
@@ -361,17 +363,14 @@ nav {
     text-transform: uppercase;
 }
 .up-photo {
-    z-index: -1;
     margin-left: 2em;
     height: 40vh;
+    z-index: 2;
 }
 .down-photo {
-    z-index: -1;
     height: 50%;
     overflow: hidden;
-}
-.about-gallery {
-    z-index: -1;
+    z-index: 2;
 }
 @media (min-width: 500px) {
     .about-gallery {
@@ -438,7 +437,7 @@ nav {
 }
 .header-port-holder {
     align-items: center;
-    z-index: -2;
+    z-index: 2;
 }
 .header-port-holder h2 {
     padding: 2vw 0;
@@ -477,7 +476,9 @@ nav {
     flex-direction: column;
 }
 .photo-port img {
+    position: relative;
     object-fit: cover;
+    z-index: 3;
 }
 .photo-port, .photo-shadow-white {
     width: min(75vw,25em);
@@ -488,7 +489,7 @@ nav {
     margin-inline-start: -10vw;
     margin-block-start: 17.5vw;
     border: 1px solid white;
-    z-index: -1;
+    z-index: 1;
 }
 .photo-shadow-yellow {
     position: absolute;
@@ -497,11 +498,13 @@ nav {
     width: 100vw;
     height: 100vw;
     border: 1px solid var(--apricot);
+    z-index: 4;
 }
 .port-title {
     width: min(75vw,25em);
     margin-block-end: 2vh;
     align-items: center;
+    z-index: 4;
 }
 .title-number {
     font-family: 'Risque', cursive;;
@@ -758,6 +761,7 @@ nav {
         color: var(--gray);
     }
 }
+
 /* SOCIALS CONTACT */
 
 .socials-contact {
