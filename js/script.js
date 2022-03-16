@@ -8,15 +8,26 @@ const navbar = document.createElement("nav");
 const counter = document.createElement("div");
 counter.classList.add("page-counter","top","flex","w-100","h-100");
 
-fetch("items/navbar.html")
-    .then((response) => {
-        return response.text();
-    })
-    .then((data) => {
-        $("nav").empty();
-        navbar.innerHTML=data;
-        $(".main-page").prepend(navbar);
-    });
+// fetch("items/navbar.html")
+//     .then((response) => {
+//         return response.text();
+//     })
+//     .then((data) => {
+//         $("nav").empty();
+//         navbar.innerHTML=data;
+//         $(".main-page").prepend(navbar);
+//     });
+
+let xmlhttp= new XMLHttpRequest();
+xmlhttp.open("GET","items/navbar.html",false);
+xmlhttp.send(null);
+navbar.innerHTML=xmlhttp.responseText;
+$(".main-page").prepend(navbar);
+
+// jQuery.get('items/navbar.html', function(data) {
+//     return data;
+// });
+
 
 //counter
 
