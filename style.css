@@ -71,7 +71,7 @@ body {
 
 nav {
     position: relative;
-    z-index: 1;
+    z-index: 999;
 }
 .navbar {
     align-items: center;
@@ -156,11 +156,12 @@ nav {
 .page-counter {
     justify-content: right;
     align-items: center;
+    min-height: 600px;
 }
 .page-counter-holder {
     flex-direction: column;
     align-items: center;
-    z-index: 1;
+    z-index: 2;
 }
 .page-line {
     height: 5em;
@@ -202,7 +203,7 @@ nav {
 /* HOME PAGE - DESIGN */
 
 .bg-home {
-    z-index: -10;
+    z-index: -1;
     background-image: url(img/home.png);
     background-position: -13em;
     background-size: cover;
@@ -211,9 +212,11 @@ nav {
 }
 .header-holder {
     justify-content: center;
+    z-index: 2;
+    position: relative;
 }
 .header {
-    padding-top: 8vh;
+    padding-top: calc(8vh + 6em);
     flex-direction: column;
 }
 .header h1, .header p {
@@ -242,6 +245,9 @@ nav {
     border: 0;
     color: white;
 }
+.action-btn:hover {
+    background-color: black;
+}
 .shadow-btn, .action-btn {
     padding: 0.75em;
     display: inline-block;
@@ -265,7 +271,7 @@ nav {
 }
 
 @media (min-width: 500px) {
-    #homepg, #about, #portfolio, #contact {
+    #homepg, #about, #portfolio, #contact, .page-counter {
         min-height: 750px;
     }
     .bg-home {
@@ -279,6 +285,7 @@ nav {
 }
 @media (min-width: 768px) {
     .bg-home {
+        z-index: 1;
         background-position: -5em;
     }
     .header h1 {
@@ -407,7 +414,7 @@ nav {
 }
 .header-aboutus-holder {
     position: relative;
-    height: 35em;
+    height: 41em;
     justify-content: center;
     align-items: center;
     z-index: 0;
@@ -727,11 +734,11 @@ nav {
     z-index: 0;
 }
 .email-box-shadow {
-    display: none;
     position: absolute;
     border: 1px solid var(--lightgraygreen);
     margin-inline-start: -8em;
     margin-block-end: -6em;
+    z-index: -999;
 }
 .email-holder {
     position: absolute;
@@ -823,14 +830,11 @@ nav {
     .header-newsletter-desktop {
         display: block;
     }
-    .email-box {
+    .email-box{
        margin: auto;
     }
     .email-box, .email-box-shadow {
        width: 53em;
-    }
-    .email-box-shadow {
-        display: block;
     }
     .email-text {
         text-align: right;

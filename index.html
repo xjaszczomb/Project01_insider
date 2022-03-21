@@ -9,17 +9,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="main-page" id="homepg">
-        <div class="bg-home top w-100 h-100">
-            <div class="btn-holder desktop">
-                <button class="action-btn home-btn">explore</button>
+    <nav class="top w-100">
+        <div class='navbar flex' aria-expanded="false">
+            <div class='nav-toggle' data-visible="true">
+                <img src='icons/menu.png' alt='menu'>
             </div>
-            <div class="grid-desktop sm-container bottom">
-                <div class="light-green-square"></div>
-                <div class="dark-square"></div>
-                <div class="light-gray-square"></div>
+            <div class='nav-close top right flex' data-visible="false">
+                <img  src="icons/close.svg" alt='close'>
+            </div>
+            <div class="navbar-nav nav" data-visible="false">
+                <ul class="nav-list flex">
+                    <li class="nav-item">Home</li>
+                    <li class="nav-item">About us</li>
+                    <li class="nav-item">Portfolio</li>
+                    <li class="nav-item">Contact</li>
+                </ul>
             </div>
         </div>
+    </nav>
+    <div class="page-counter top flex w-100 h-100">
+        <div class='page-counter-holder flex'>
+            <div class='page-nr' id='current'>1</div>
+            <hr class='page-line'>
+            <div class='page-nr' id='total'>4</div>
+        </div>
+    </div>
+    <div class="main-page" id="homepg">
         <div class="header-holder flex">
             <div class="header flex">
                 <h1>Insider</h1>
@@ -28,6 +43,16 @@
                     <button class="action-btn home-btn">explore</button>
                     <button class="shadow-btn">explore</button>
                 </div>
+            </div>
+        </div>
+        <div class="bg-home top w-100 h-100">
+            <div class="btn-holder desktop">
+                <button class="action-btn home-btn">explore</button>
+            </div>
+            <div class="grid-desktop sm-container bottom">
+                <div class="light-green-square"></div>
+                <div class="dark-square"></div>
+                <div class="light-gray-square"></div>
             </div>
         </div>
         <div class="grid-mobile sm-container bottom flex">
@@ -111,7 +136,7 @@
                     </div>
                     <button class="action-btn newsletter-button">send</button>
                 </div>  
-                <div class="email-box-shadow"></div>
+                <!-- <div class="email-box-shadow"></div> -->
             </div>
             <div class="socials-contact bottom right flex">
                 <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -138,6 +163,7 @@
         </div>
     </div>
 
+    <script src="js/nav.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
