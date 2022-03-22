@@ -1,4 +1,7 @@
-$(".nav-close").click(()=> {
+function currentWidth() {
+    return $(window).width();
+}
+function navClose() {
     const visible= $(".nav").attr("data-visible");
     if(visible==="true") {
         // $(".nav").removeClass("navbar-nav");
@@ -8,17 +11,19 @@ $(".nav-close").click(()=> {
         $(".nav-toggle").attr("data-visible",true);
         $(".nav-close").attr("data-visible",false);
     }
-});
-
-$(".nav-toggle").click(()=> {
+}
+function navShow() {
     const visible= $(".nav").attr("data-visible");
     if(visible==="false") {
-        // $(".nav").addClass("navbar-nav");
+        // $(".nav").removeClass("navbar-nav");
         $(".nav").attr("data-visible",true);
         $(".navbar").attr("aria-expanded",true);
-
+        
         $(".nav-toggle").attr("data-visible",false);
         $(".nav-close").attr("data-visible",true);
-
     }
-});
+}
+
+$(".nav-close").click(()=> navClose());
+$(".nav-toggle").click(()=> navShow());
+$(window).resize(()=> navClose());

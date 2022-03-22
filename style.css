@@ -88,19 +88,35 @@ nav {
     counter-reset: section;
 }
 .nav-item {
+    cursor: pointer;
+    position: relative;
     color: white;
     text-transform: uppercase;
-    font-size: 1.125rem;
     font-weight: 500;
     letter-spacing: 2px;
-    padding: 0.75em 2em;
+    margin: 0.75em 2em;
     width: 20em;
+    display: flex;
+    align-items: center;
 }
 .nav-item::before {
     counter-increment: section;
     content: "0" counter(section) " ";
     color: var(--graygreen);
     font-family: 'Risque', cursive;
+    margin-inline-end: 0.5em;
+}
+.nav-item hr {
+    display: none;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    background-color: var(--graygreen);
+    border: 1px solid var(--graygreen);
+}
+.nav-item:hover hr {
+    display: block;
+    animation: appear 0.25s;
 }
 .nav-toggle[data-visible="false"] {
     display: none;
@@ -113,12 +129,13 @@ nav {
 }
 .navbar[aria-expanded="true"] {
     position: absolute;
-    height: 100vh;
+    min-height: 600px;
     width: 100%;
     z-index: 999;
     justify-content: flex-start;
     background: rgba(0, 0, 0, 0.9);
-    animation: sideNav 1s;
+    animation: appear 1s;
+    overflow-x: hidden;
 }
 .nav-close {
     height: 6em;
@@ -128,7 +145,7 @@ nav {
     width: 75%;
 }
 
-@keyframes sideNav {
+@keyframes appear {
     from {width: 0%;}
     to {width: 100%;}
 }
@@ -148,6 +165,19 @@ nav {
 @media (min-width: 992px) {
     .nav-toggle {
         display: none;
+    }
+    .navbar-nav[data-visible="false"] {
+        display: block;
+    }
+    .nav-list {
+        flex-direction: row;
+        justify-content: flex-end;
+        animation: none;
+    }
+    .nav-item {
+        width: auto;
+        margin: 0em 1.25em;
+        justify-content: center;
     }
 }
 
@@ -224,10 +254,17 @@ nav {
     font-weight: bold;
 }
 .header h1 {
+    cursor: pointer;
     font-size: min(23vw , 12rem);
     color: var(--graygreen);
     letter-spacing: 4px;
     line-height: min(22vw, 1em);
+    transition: 0.25s;
+}
+.header h1:hover {
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--graygreen);
 }
 .header p {
     font-family: 'Josefin Sans', sans-serif;
@@ -240,10 +277,13 @@ nav {
     margin-top: min(3em,7vh);
 }
 .action-btn {
+    cursor: pointer;
     background-color: var(--greenhaze);
     display: inline-block;
     border: 0;
     color: white;
+    transition: 0.25s;
+    animation: greenblack 1s linear 2s 2 alternate;
 }
 .action-btn:hover {
     background-color: black;
@@ -270,8 +310,13 @@ nav {
     margin-inline-start: min(1.25vw , 15px);
 }
 
+@keyframes greenblack{ 
+    from {background-color: var(--greenhaze);}
+    to {background-color: var(--black);}
+}
+
 @media (min-width: 500px) {
-    #homepg, #about, #portfolio, #contact, .page-counter {
+    #homepg, #about, #portfolio, #contact, .page-counter, .navbar[aria-expanded="true"]{
         min-height: 750px;
     }
     .bg-home {
@@ -292,7 +337,6 @@ nav {
         letter-spacing: 10px;
     }
     .header p {
-        padding-inline-start: 4em;
         letter-spacing: 0.15em;
         line-height: 1.5rem;
     }
@@ -354,8 +398,16 @@ nav {
     align-items: center;
     padding: 1.5em 0;
 }
-.socials-grid img {
+.socials-grid svg {
+    cursor: pointer;
     width: 40%;
+}
+.socials-grid svg:hover .svg-icon{
+    stroke: var(--graygreen);
+}
+.socials-grid svg .svg-icon{
+    stroke: var(--black);
+    stroke-width: 2.25;
 }
 .grid-desktop {
     display: none;
@@ -367,7 +419,6 @@ nav {
     "light-green-square dark-square"
     ". light-gray-square"
     ". ."; 
-    margin-left: -1px;
 }
 .grid-mobile {
     z-index: 0;
@@ -375,7 +426,6 @@ nav {
 @media (min-width: 500px) {
     .grid-mobile {  
         position: absolute;
-        z-index: -10;
         width: 25%;
         height: 243px;
         grid-template-columns: 1fr 1fr; 
@@ -852,12 +902,16 @@ nav {
     align-items: center;
 }
 .socials-contact svg {
+    cursor: pointer;
     height: max(1.5em,4vh);
     width: max(1.5em,4vh);
     margin-block-end: 0.5em;
 }
 .socials-contact svg:last-child {
     margin-block-end: 0;
+}
+.socials-contact svg:hover .svg-icon-contact{
+    stroke: var(--greenhaze);
 }
 .svg-icon-contact{
     stroke: white;
@@ -873,6 +927,7 @@ nav {
 /* FOOTER - DESING */
 
 .footer {
+    cursor: pointer;
     color: white;
     font-weight: 200;
     font-size: min(4vw,1em);
@@ -882,6 +937,7 @@ nav {
 }
 .footer-item {
     padding: 0.25em 1em;
+    transition: 0.25s;
 }
 
 @media (min-width: 768px) {
