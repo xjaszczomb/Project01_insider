@@ -52,8 +52,6 @@ body {
     z-index: -3;
 } */
 
-/* test3 */
-
 .mobile {
     display: block;
 }
@@ -262,7 +260,7 @@ nav {
     color: var(--graygreen);
     letter-spacing: 4px;
     line-height: min(22vw, 1em);
-    transition: 0.25s;
+    transition: 0.5s;
 }
 .header h1:hover {
     color: transparent;
@@ -282,7 +280,6 @@ nav {
 .action-btn {
     cursor: pointer;
     background-color: var(--greenhaze);
-    display: inline-block;
     border: 0;
     color: white;
     transition: 0.25s;
@@ -293,7 +290,6 @@ nav {
 }
 .shadow-btn, .action-btn {
     padding: 0.75em;
-    display: inline-block;
     font-size: min(1.75rem,10vh);
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
@@ -485,7 +481,7 @@ nav {
     text-align: right;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: var(--apricot);
-    transition: 0.25s;
+    transition: 0.5s;
 }
 .h-about:hover h2 {
     color: var(--apricot);
@@ -779,6 +775,11 @@ nav {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: white;
 }
+.header-newsletter:hover {
+    color: white;
+    -webkit-text-stroke-width: none;
+    transition: 0.5s;
+}
 .header-newsletter-mobile {
     -webkit-transform: rotate(-90deg) translate(-45%, -220%);
     -moz-transform: rotate(-90deg) translate(-45%, -220%);
@@ -801,7 +802,7 @@ nav {
     position: relative;
     background-color: var(--black);
     width: 90%;
-    height: 5.5em;
+    height: 6em;
     margin-block-start: 15vh;
     justify-content: center;
     align-items: center;
@@ -834,6 +835,12 @@ nav {
     font-weight: 200;
     color: white;
 }
+.email-input:focus {
+    outline: none;
+    margin-inline-end: -1em;
+    margin-block-end: -0.625em;
+    transition: 0.5s;
+}
 .email-input, .email-shadow{
     width: 100%;
     height: 2.5rem;
@@ -847,8 +854,18 @@ nav {
 }
 .newsletter-button {
     position: absolute;
-    margin-block-end: -5.25em;
+    margin-block-end: -5.5em;
     right: 0.375em;
+    justify-content: center;
+    align-items: center;
+}
+.spin img {
+    animation: spin 0.5s linear infinite;
+}
+
+@keyframes spin {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
 }
 
 @media (min-width: 500px) {
@@ -875,7 +892,7 @@ nav {
         font-size: 6rem;
     }
     .newsletter-button {
-        position: static;
+        position: relative;
         margin-block-end: 0;
         right: auto;
     }
@@ -961,7 +978,7 @@ nav {
 }
 .footer-item {
     padding: 0.25em 1em;
-    transition: 0.25s;
+    transition: 0.5s;
 }
 
 @media (min-width: 768px) {
