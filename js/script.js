@@ -11,9 +11,6 @@ $(window).resize(()=> $('#pabout').css("width",$('#habout').width()) );
 $(document).scroll(()=> $('#pabout').css("width",$('#habout').width()) );
 
 
-
-
-
 //**********************************************************
 //               CONCEPT REQUIRES REACT 
 //**********************************************************
