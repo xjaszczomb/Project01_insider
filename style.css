@@ -826,6 +826,7 @@ nav {
     font-weight: 300;
     font-size: 0.75rem;
     color: white;
+    transition: 1s;
 }
 .email-input {
     position: absolute;
@@ -858,9 +859,14 @@ nav {
     right: 0.375em;
     justify-content: center;
     align-items: center;
+    animation: none;
 }
 .spin img {
     animation: spin 0.5s linear infinite;
+}
+.result {
+    transition: 1s;
+    color: white;
 }
 
 @keyframes spin {
