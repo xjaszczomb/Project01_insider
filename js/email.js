@@ -1,8 +1,6 @@
-
 function currentWidth() {
     return $(window).width();
 }
-
 function successButton() {
     setTimeout(()=> {
         currentMessagePlace().slideDown();
@@ -11,6 +9,9 @@ function successButton() {
             "width" : "40%"
         });
     }, 2000)
+}
+function currentMessagePlace() {
+    return currentWidth() < 992 ? $('.result').first() : $('.result').last();
 }
 function animationDesktop(status){
     if(status) {
@@ -52,9 +53,6 @@ const validateEmail = (email) => {
       /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     );
 };
-function currentMessagePlace() {
-    return currentWidth() < 992 ? $('.result').first() : $('.result').last();
-}
 function validate(email) {
     let success;
     currentMessagePlace().text('');
