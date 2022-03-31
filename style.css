@@ -855,8 +855,8 @@ nav {
 }
 .newsletter-button {
     position: absolute;
-    margin-block-end: -5.5em;
-    right: 0.375em;
+    margin-block-end: -6.5em;
+    right: 0;
     justify-content: center;
     align-items: center;
     animation: none;
@@ -867,6 +867,7 @@ nav {
 .result {
     transition: 1s;
     color: white;
+    margin-block-end: 0.5em;
 }
 
 @keyframes spin {
