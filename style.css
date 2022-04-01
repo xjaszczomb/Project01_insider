@@ -20,6 +20,28 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
+main {
+    position: relative;
+}
+.main-page {
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    overflow: hidden;
+    position: relative;
+}
+#homepg {
+    z-index: 1;
+}
+#about {
+    z-index: 2;
+}
+#portfolio {
+    z-index: 3;
+}
+#contact {
+    z-index: 4;
+}
 .top {
     position: absolute;
     top: 0;
@@ -41,22 +63,11 @@ body {
 .flex {
     display: flex;
 }
-
-#homepg, #about, #portfolio, #contact {
-    height: 100vh;
-    min-height: 600px;
-    overflow: hidden;
-    position: relative;
+.none, .desktop {
+    display: none;
 }
-/* #about, #portfolio {
-    z-index: -3;
-} */
-
 .mobile {
     display: block;
-}
-.desktop {
-    display: none;
 }
 @media (min-width: 768px) {
     .mobile {
