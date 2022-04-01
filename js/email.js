@@ -8,7 +8,9 @@ function successButton() {
             "animation" : "none",
             "width" : "40%"
         });
+        
     }, 2000)
+    console.log("?");
 }
 function currentMessagePlace() {
     return currentWidth() < 992 ? $('.result').first() : $('.result').last();
@@ -21,14 +23,17 @@ function animationDesktop(status){
             $('.email-shadow').slideUp();
             $('.email-text').css("color","transparent");
             currentMessagePlace().addClass("w-100").css("margin-block-end","0");
-        }, 1000)
+        }, 1000);
         successButton();
+        console.log("????");
     } else {
         $('.result').first().text(resultFirstText);
         setTimeout(()=> {
             $(".newsletter-button").html("send").css("background-color","var(--greenhaze)");
         }, 2000)
+        console.log("???");
     }
+   
 }
 function animationMobile(status) {
     if(status) {

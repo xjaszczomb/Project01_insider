@@ -6,9 +6,9 @@ $(document).ready(()=> { currentWidth()<992 ? $("#emailboxoverflow").removeClass
 $(window).resize(()=> { currentWidth()<992 ? $("#emailboxoverflow").removeClass("email-box-overflow") : $("#emailboxoverflow").addClass("email-box-overflow");});
 
 // dynamic width of p (about)
-$(document).ready(()=> $('#pabout').css("width",$('#habout').width()) );
-$(window).resize(()=> $('#pabout').css("width",$('#habout').width()) );
-$(document).scroll(()=> $('#pabout').css("width",$('#habout').width()) );
+//$(document).ready(()=> $('#pabout').css("width",$('#habout').width()) );
+//$(window).resize(()=> $('#pabout').css("width",$('#habout').width()) );
+//$(document).scroll(()=> $('#pabout').css("width",$('#habout').width()) );
 
 
 //**********************************************************

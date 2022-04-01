@@ -469,8 +469,11 @@ nav {
     box-shadow: 10px -10px 15px rgba(0, 0, 0, 0.5);
 }
 .header-aboutus {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     margin-inline-end: 8vw;
+    max-width: 75vw;
 }
 .header-aboutus-holder {
     position: relative;
@@ -483,7 +486,7 @@ nav {
     /* background-color: red; */
     display: inline-block;
 }
-.h-about h2 {
+.h-about h2{
     color: transparent;
     font-weight: 900;
     font-size: 22vw;
@@ -550,8 +553,12 @@ nav {
         letter-spacing: 5px;
     }
     .header-aboutus {
+        max-width: 35em;
         margin-inline-end: 0;
         margin-inline-start: 4em;
+    }
+    .p-about {
+        max-width: 28em;
     }
 }
 @media (min-width: 992px) {
