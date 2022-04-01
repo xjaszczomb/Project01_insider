@@ -1,8 +1,8 @@
 pages= $(".main-page");
 
-function setPic(next) {
-    pages.removeAttr("current");
-    $(next).attr("current",'1');
+function setPage(next) {
+    pages.removeAttr("current").removeClass("top").addClass("none");
+    $(next).attr("current",'1').addClass("top").removeClass("none");
 };
 function currentPage() {
     let current = null;
@@ -17,11 +17,11 @@ $(document).ready(function(){
         if(e.originalEvent.wheelDelta /120 > 0) {
             if(currentPage()!=null) 
                  if(currentPage().prev().length!=0) 
-                     setPic(currentPage().prev());
+                     setPage(currentPage().prev());
         } else { 
             if(currentPage()!=null) 
                  if(currentPage().next().length!=0) 
-                     setPic(currentPage().next());
+                     setPage(currentPage().next());
         }
     });
 });
