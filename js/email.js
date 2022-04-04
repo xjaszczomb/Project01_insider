@@ -85,8 +85,8 @@ $(".newsletter-button").click( ()=> {
     const email = $('.email-input').val();
     $(".newsletter-button").html(initSpin).css("background-color", "black");
     $(".spin").css({
-        "width" : prevWidth,
-        "height": prevHeight
+        "width" : "1.5em",
+        "height": "1.5em"
     });
     currentAnimation(validate(email));
     $(window).resize(()=> currentAnimation(validate(email)));

@@ -29,6 +29,7 @@ main {
     min-height: 600px;
     overflow: hidden;
     position: relative;
+    transition: 1s;
 }
 #homepg {
     z-index: 1;
@@ -54,6 +55,9 @@ main {
     position: absolute;
     bottom: 0;
 }
+.h-0 {
+    height: 0;
+}
 .w-100 {
     width: 100%;
 }
@@ -77,7 +81,6 @@ main {
         display: block;
     }
 }
-
 /* NAVBAR */
 
 nav {
@@ -203,7 +206,7 @@ nav {
 .page-counter-holder {
     flex-direction: column;
     align-items: center;
-    z-index: 2;
+    z-index: 999;
 }
 .page-line {
     height: 5em;
@@ -770,8 +773,8 @@ nav {
 
 #contact {
     background-color: var(--darkgray);
-    z-index: 0;
 }
+
 .bg-contact {
     width: 72%;
     z-index: -2;
@@ -878,6 +881,8 @@ nav {
     justify-content: center;
     align-items: center;
     animation: none;
+    width: 7rem;
+    height: 4.5rem;
 }
 .spin img {
     animation: spin 0.5s linear infinite;
@@ -910,6 +915,8 @@ nav {
     .newsletter-button {
         padding: 0.75em 1em ;
         font-size: 2rem;
+        width: 8.5rem;
+        height: 5rem;
     }
 }
 @media (min-width: 768px) {
